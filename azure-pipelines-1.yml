@@ -3,7 +3,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- DevOpsTest
+- azure-pipelines
 
 resources:
 - repo: self
@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'jimmybchoppspipelinesjavascriptdocker-1546.metrics-dev'
+    environment: 'NodeJSDevOpsTest.metrics-dev'
     strategy:
       runOnce:
         deploy:
