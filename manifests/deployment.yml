@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: jimmybchoppspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jimmybchoppspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jimmybchoppspipelinesjavascriptdocker 
+          image: ccscontainers.azurecr.io/jimmybchoppspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
